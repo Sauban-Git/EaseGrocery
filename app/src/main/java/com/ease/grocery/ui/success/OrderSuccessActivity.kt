@@ -1,10 +1,13 @@
 package com.ease.grocery.ui.order
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.TextView
+import androidx.activity.addCallback
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.ease.grocery.R
+import com.ease.grocery.ui.home.HomeActivity
 
 class OrderSuccessActivity : AppCompatActivity() {
 
@@ -25,5 +28,22 @@ class OrderSuccessActivity : AppCompatActivity() {
         viewModel.deliveryTime.observe(this) {
             tvDeliveryTime.text = "Estimated Delivery: $it mins"
         }
+        onBackPressedDispatcher.addCallback(this) {
+
+            val intent = Intent(
+                this@OrderSuccessActivity,
+                HomeActivity::class.java
+            )
+
+            intent.flags =
+                Intent.FLAG_ACTIVITY_NEW_TASK or
+                        Intent.FLAG_ACTIVITY_CLEAR_TASK
+
+            startActivity(intent)
+
+            finish()
+        }
     }
+
+
 }
