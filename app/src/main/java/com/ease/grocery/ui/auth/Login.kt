@@ -18,7 +18,7 @@ class Login : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         WindowCompat.setDecorFitsSystemWindows(window, true)
-        setContentView(R.layout.login)
+        setContentView(R.layout.activity_login)
 
         val phone = findViewById<EditText>(R.id.etPhone)
         val otp = findViewById<EditText>(R.id.etOtp)

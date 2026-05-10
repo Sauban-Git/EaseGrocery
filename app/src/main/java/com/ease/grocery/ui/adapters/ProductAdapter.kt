@@ -11,7 +11,8 @@ import com.ease.grocery.R
 import com.ease.grocery.data.model.Product
 
 class ProductAdapter(
-    private var list: List<Product>
+    private var list: List<Product>,
+    private val onAddClick: (Product) -> Unit
 ) : RecyclerView.Adapter<ProductAdapter.ProductViewHolder>() {
 
     class ProductViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -39,7 +40,10 @@ class ProductAdapter(
         holder.img.setImageResource(item.image)
 
         holder.btn.setOnClickListener {
+
             holder.btn.text = "ADDED"
+
+            onAddClick(item)
         }
     }
 

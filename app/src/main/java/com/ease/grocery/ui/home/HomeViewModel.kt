@@ -46,6 +46,10 @@ class HomeViewModel : ViewModel() {
         loadProducts()
     }
 
+    private var selectedCategory: String = "All"
+    private var searchQuery: String = ""
+
+
     private fun loadProducts() {
         _products.value = list
     }
@@ -54,5 +58,27 @@ class HomeViewModel : ViewModel() {
         _products.value =
             if (category == null || category == "All") list
             else list.filter { it.category == category }
+    }
+
+    fun searchProducts(query: String) {
+        searchQuery = query
+        applyFilters()
+    }
+
+    private fun applyFilters() {
+
+        val filtered = list.filter { product ->
+
+            val matchesCategory =
+                selectedCategory == "All" ||
+                        product.category.equals(selectedCategory, ignoreCase = true)
+
+            val matchesSearch =
+                product.name.contains(searchQuery, ignoreCase = true)
+
+            matchesCategory && matchesSearch
+        }
+
+        _products.value = filtered
     }
 }
