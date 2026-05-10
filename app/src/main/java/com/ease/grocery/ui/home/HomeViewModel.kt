@@ -11,20 +11,20 @@ class HomeViewModel : ViewModel() {
     private val _products = MutableLiveData<List<Product>>()
     val products: LiveData<List<Product>> = _products
     private val list = listOf(
-        Product("Apple", 120, "1 Kg", "Fruits", R.drawable.ic_launcher_foreground),
-        Product("Banana", 60, "1 Dozen", "Fruits", R.drawable.ic_launcher_foreground),
-        Product("Milk", 50, "1 Litre", "Dairy", R.drawable.ic_launcher_foreground),
-        Product("Bread", 40, "1 Pack", "Bakery", R.drawable.ic_launcher_foreground),
-        Product("Tomato", 30, "1 Kg", "Vegetables", R.drawable.ic_launcher_foreground),
+        Product("Apple", 120, "1 Kg", "Fruits", R.drawable.apple_svgrepo_com),
+        Product("Banana", 60, "1 Dozen", "Fruits", R.drawable.banana_food_fruits_svgrepo_com),
+        Product("Milk", 50, "1 Litre", "Dairy", R.drawable.milk_bottle_svgrepo_com),
+        Product("Bread", 40, "1 Pack", "Bakery", R.drawable.bread_svgrepo_com),
+        Product("Tomato", 30, "1 Kg", "Vegetables", R.drawable.tomato_svgrepo_com),
 
-        Product("Rice", 80, "1 Kg", "Grocery", R.drawable.ic_launcher_foreground),
-        Product("Wheat Flour", 70, "1 Kg", "Grocery", R.drawable.ic_launcher_foreground),
-        Product("Sugar", 45, "1 Kg", "Grocery", R.drawable.ic_launcher_foreground),
-        Product("Salt", 20, "1 Kg", "Grocery", R.drawable.ic_launcher_foreground),
-        Product("Onion", 35, "1 Kg", "Vegetables", R.drawable.ic_launcher_foreground),
+        Product("Rice", 80, "1 Kg", "Grocery", R.drawable.rice_svgrepo_com),
+        Product("Wheat Flour", 70, "1 Kg", "Grocery", R.drawable.wheat_flour_container_svgrepo_com),
+        Product("Sugar", 45, "1 Kg", "Grocery", R.drawable.sugar_svgrepo_com),
+        Product("Salt", 20, "1 Kg", "Grocery", R.drawable.salt_svgrepo_com),
+        Product("Onion", 35, "1 Kg", "Vegetables", R.drawable.onion_01_svgrepo_com),
 
-        Product("Potato", 25, "1 Kg", "Vegetables", R.drawable.ic_launcher_foreground),
-        Product("Apple Juice", 90, "1 Litre", "Beverages", R.drawable.ic_launcher_foreground),
+        Product("Potato", 25, "1 Kg", "Vegetables", R.drawable.potato_svgrepo_com),
+        Product("Apple Juice", 90, "1 Litre", "Beverages", R.drawable.cider_svgrepo_com),
         Product("Orange", 70, "1 Kg", "Fruits", R.drawable.ic_launcher_foreground),
         Product("Grapes", 110, "1 Kg", "Fruits", R.drawable.ic_launcher_foreground),
         Product("Mango", 150, "1 Kg", "Fruits", R.drawable.ic_launcher_foreground),

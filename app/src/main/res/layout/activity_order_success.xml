@@ -7,6 +7,7 @@
     android:background="#F7F8FA"
     android:gravity="center"
     android:orientation="vertical"
+    android:fitsSystemWindows="true"
     android:padding="24dp"
     tools:context=".ui.order.OrderSuccessActivity">
 
