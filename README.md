@@ -5,6 +5,37 @@ EaseGrocery is a grocery shopping Android application developed using Kotlin and
 The project is built with XML layouts in Android Studio and follows modular and maintainable project structuring practices.
 
 ---
+<!-- Row 1 -->
+<p float="left">
+  <a href="https://www.youtube.com/watch?v=VIDEO1">
+    <img src="assets/Screenshot_2026-05-12-18-54-31-463_com.ease.grocery.jpg" width="150" />
+  </a>
+  <a href="https://www.youtube.com/watch?v=VIDEO2">
+    <img src="assets/Screenshot_2026-05-12-18-54-36-561_com.ease.grocery.jpg" width="150" />
+  </a>
+  <a href="https://www.youtube.com/watch?v=VIDEO3">
+    <img src="assets/Screenshot_2026-05-12-18-54-58-686_com.ease.grocery.jpg" width="150" />
+  </a>
+  <a href="https://www.youtube.com/watch?v=VIDEO4">
+    <img src="assets/Screenshot_2026-05-12-18-55-02-813_com.ease.grocery.jpg" width="150" />
+  </a>
+</p>
+
+<!-- Row 2 -->
+<p float="left">
+  <a href="https://www.youtube.com/watch?v=VIDEO5">
+    <img src="assets/Screenshot_2026-05-12-18-55-14-926_com.ease.grocery.jpg" width="150" />
+  </a>
+  <a href="https://www.youtube.com/watch?v=VIDEO6">
+    <img src="assets/Screenshot_2026-05-12-18-55-19-188_com.ease.grocery.jpg" width="150" />
+  </a>
+  <a href="https://www.youtube.com/watch?v=VIDEO7">
+    <img src="assets/Screenshot_2026-05-12-18-55-22-840_com.ease.grocery.jpg" width="150" />
+  </a>
+  <a href="https://www.youtube.com/watch?v=VIDEO8">
+    <img src="assets/Screenshot_2026-05-12-18-55-39-638_com.ease.grocery.jpg" width="150" />
+  </a>
+</p>
 
 ## Features
 
