@@ -212,6 +212,7 @@ Sync Project with Gradle Files
 - Click Run in Android Studio
 
 - Or you can use below link to download application directly on your android and run it.
+  
   [Demo Release](https://github.com/Sauban-Git/EaseGrocery/releases/download/v0.1.0/EasyGrocery.apk)
 
 ---
