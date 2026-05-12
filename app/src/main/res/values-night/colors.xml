@@ -1,0 +1,23 @@
+<resources>
+
+    <!-- Brand -->
+    <color name="colorPrimary">#66BB6A</color>
+    <color name="colorPrimaryVariant">#81C784</color>
+    <color name="colorSecondary">#81C784</color>
+
+    <!-- Background -->
+    <color name="colorBackground">#101512</color>
+    <color name="colorSurface">#1A221D</color>
+    <color name="colorSurfaceVariant">#1F2A22</color>
+
+    <!-- Text -->
+    <color name="colorOnBackground">#F3F4F6</color>
+    <color name="colorOnSurface">#F3F4F6</color>
+    <color name="colorOnSurfaceVariant">#9CA3AF</color>
+
+    <!-- UI -->
+    <color name="colorBorder">#2D3748</color>
+    <color name="colorSuccess">#22C55E</color>
+    <color name="colorOnPrimary">#000000</color>
+
+</resources>

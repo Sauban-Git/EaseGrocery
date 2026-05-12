@@ -13,6 +13,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="2dp"
+        app:cardUseCompatPadding="true"
+        android:backgroundTint="?attr/colorSurface"
         android:padding="10dp">
 
         <!-- Product Image -->
@@ -20,9 +24,9 @@
             android:id="@+id/imgProduct"
             android:layout_width="match_parent"
             android:layout_height="120dp"
+            android:padding="12dp"
             android:scaleType="centerCrop"
-            android:src="@android:drawable/ic_menu_gallery"
-            android:background="#F1F1F1" />
+            android:src="@android:drawable/ic_menu_gallery"/>
 
         <!-- Product Name -->
         <TextView
@@ -31,8 +35,8 @@
             android:layout_height="wrap_content"
             android:text="Fresh Apples"
             android:textStyle="bold"
-            android:textSize="16sp"
-            android:textColor="#1B1B1B"
+            android:textColor="?android:textColorPrimary"
+            android:textSize="17sp"
             android:layout_marginTop="8dp"/>
 
         <!-- Unit (kg / pcs) -->
@@ -41,8 +45,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="1 kg"
-            android:textSize="13sp"
-            android:textColor="#777777"/>
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp" />
 
         <!-- Price + Button Row -->
         <LinearLayout
@@ -58,17 +62,17 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="₹120"
-                android:textStyle="bold"
-                android:textSize="16sp"
-                android:textColor="#2E7D32"/>
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
 
             <!-- Add Button -->
             <Button
                 android:id="@+id/btnAdd"
                 android:layout_width="wrap_content"
                 android:layout_height="36dp"
-                android:text="ADD"
+                style="@style/GreenButton"
+                android:text="Add"
                 android:textSize="12sp"
                 android:backgroundTint="#4CAF50"
                 android:textColor="#FFFFFF"/>

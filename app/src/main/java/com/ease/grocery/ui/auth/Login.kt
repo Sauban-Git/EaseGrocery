@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.WindowCompat
 import androidx.lifecycle.ViewModelProvider
 import com.ease.grocery.R
+import com.ease.grocery.data.local.PrefManager
 import com.ease.grocery.ui.home.HomeActivity
 
 class Login : AppCompatActivity() {
@@ -16,6 +17,11 @@ class Login : AppCompatActivity() {
     private lateinit var viewModel: AuthViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        if (PrefManager(this).isLoggedIn()) {
+            startActivity(Intent(this, HomeActivity::class.java))
+            finish()
+            return
+        }
         super.onCreate(savedInstanceState)
         WindowCompat.setDecorFitsSystemWindows(window, true)
         setContentView(R.layout.activity_login)
@@ -50,6 +56,7 @@ class Login : AppCompatActivity() {
                 }
 
                 is AuthState.Verified -> {
+                    PrefManager(this).saveLogin(true)
                     Toast.makeText(this, "Login Success", Toast.LENGTH_SHORT).show()
                     val intent = Intent(this, HomeActivity::class.java)
                     startActivity(intent)

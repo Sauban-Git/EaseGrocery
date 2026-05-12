@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="2dp"
+    android:padding="12dp"
     android:orientation="horizontal">
 
     <ImageView
@@ -43,12 +44,16 @@
                 android:id="@+id/btnMinus"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
+                android:textColor="#EF4444"
+                android:textStyle="bold"
                 android:src="@android:drawable/ic_menu_delete"/>
 
             <TextView
                 android:id="@+id/tvQty"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
+                android:backgroundTint="@color/colorPrimary"
+                app:tint="@android:color/white"
                 android:gravity="center"
                 android:text="1"/>
 

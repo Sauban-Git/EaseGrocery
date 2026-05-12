@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
@@ -32,10 +33,13 @@ class CartActivity : AppCompatActivity() {
         val btnCheckout = findViewById<Button>(R.id.btnCheckout)
 
         btnCheckout.setOnClickListener {
-
-            startActivity(
-                Intent(this, CheckoutActivity::class.java)
-            )
+            if (viewModel.getTotalPrice() <= 0) {
+                Toast.makeText(this, "No item is in cart to checkout", Toast.LENGTH_SHORT).show()
+            } else {
+                startActivity(
+                    Intent(this, CheckoutActivity::class.java)
+                )
+            }
         }
 
         adapter = CartAdapter(

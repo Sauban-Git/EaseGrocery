@@ -1,0 +1,73 @@
+<resources>
+
+    <style name="GreenButton" parent="Widget.Material3.Button">
+        <item name="backgroundTint">?attr/colorPrimary</item>
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+        <item name="cornerRadius">16dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="GreenOutlinedButton"
+        parent="Widget.Material3.Button.OutlinedButton">
+
+        <item name="strokeColor">?attr/colorPrimary</item>
+        <item name="android:textColor">?attr/colorPrimary</item>
+        <item name="cornerRadius">14dp</item>
+
+    </style>
+
+    <style name="RoundedGreenChip"
+        parent="Widget.Material3.Chip.Filter">
+
+        <item name="shapeAppearanceOverlay">
+            @style/ShapeAppearance.EaseGrocery.Chip
+        </item>
+
+        <item name="chipBackgroundColor">?attr/colorSurfaceVariant</item>
+        <item name="android:textColor">?attr/colorPrimary</item>
+
+        <item name="chipStrokeWidth">0dp</item>
+
+        <item name="chipStartPadding">14dp</item>
+        <item name="chipEndPadding">14dp</item>
+
+        <item name="chipMinHeight">42dp</item>
+
+        <item name="checkedIconVisible">false</item>
+
+        <item name="rippleColor">@color/colorSecondary</item>
+
+    </style>
+
+    <style name="ShapeAppearance.EaseGrocery.Chip">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">18dp</item>
+    </style>
+
+    <style name="ShapeAppearance.EaseGrocery.Small"
+        parent="ShapeAppearance.Material3.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">12dp</item>
+    </style>
+
+    <style name="ShapeAppearance.EaseGrocery.Medium"
+        parent="ShapeAppearance.Material3.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">18dp</item>
+    </style>
+
+    <style name="ShapeAppearance.EaseGrocery.Large"
+        parent="ShapeAppearance.Material3.LargeComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">28dp</item>
+    </style>
+
+    <style name="ShapeAppearance.EaseGrocery"
+        parent="ShapeAppearance.Material3.MediumComponent">
+
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+
+    </style>
+
+</resources>

@@ -6,6 +6,7 @@
     <string name="otp">OTP</string>
     <string name="sendOtp">Send OTP</string>
     <string name="verify">Verify</string>
+    <string name="proceed">Continue</string>
     <string name="login">Login</string>
     <string name="wrongOtp">Wrong OTP</string>
     <string name="invalidPhone">Invalid Phone Number</string>

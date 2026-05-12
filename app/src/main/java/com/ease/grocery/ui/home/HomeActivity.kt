@@ -5,9 +5,11 @@ import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.HorizontalScrollView
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.WindowCompat
 import androidx.lifecycle.ViewModelProvider
@@ -33,6 +35,22 @@ class HomeActivity : AppCompatActivity() {
         val scrollView = findViewById<HorizontalScrollView>(R.id.chipScroll)
 
         val btnCart = findViewById<Button>(R.id.btnCart)
+        val tvCartBadge = findViewById<TextView>(R.id.tvCartBadge)
+
+        CartRepository.cartLiveData.observe(this) { items ->
+
+            val count = items.sumOf { it.quantity }
+
+            if (count > 0) {
+
+                tvCartBadge.visibility = View.VISIBLE
+                tvCartBadge.text = count.toString()
+
+            } else {
+
+                tvCartBadge.visibility = View.GONE
+            }
+        }
 
         btnCart.setOnClickListener {
 

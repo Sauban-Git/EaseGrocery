@@ -1,11 +1,22 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.EaseGrocery" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
-        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
-        <item name="android:windowTranslucentStatus">false</item>
+
+    <style name="Theme.EaseGrocery"
+        parent="Theme.Material3.DayNight.NoActionBar">
+
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorSecondary">@color/colorSecondary</item>
+
+        <item name="android:windowBackground">@color/colorBackground</item>
+
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+
+        <!-- Shapes -->
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.EaseGrocery.Small</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.EaseGrocery.Medium</item>
+        <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.EaseGrocery.Large</item>
+
     </style>
 
-    <style name="Theme.EaseGrocery" parent="Base.Theme.EaseGrocery" />
 </resources>
