@@ -13,3 +13,5 @@
 .externalNativeBuild
 .cxx
 local.properties
+release-key.p12
+app/release-key.p12

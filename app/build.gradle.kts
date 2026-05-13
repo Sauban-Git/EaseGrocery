@@ -20,13 +20,40 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
+signingConfigs {
+        create("release") {
+            fun secret(name: String): String? =
+                providers
+                    .gradleProperty(name)
+                    .orElse(providers.environmentVariable(name))
+                    .orNull
+
+            val storeFilePath = secret("RELEASE_STORE_FILE")
+            if (!storeFilePath.isNullOrBlank()) {
+                storeFile = file(storeFilePath)
+                storePassword = secret("RELEASE_STORE_PASSWORD")
+                keyAlias = secret("RELEASE_KEY_ALIAS")
+                keyPassword = secret("RELEASE_KEY_PASSWORD")
+                storeType = secret("RELEASE_STORE_TYPE") ?: "PKCS12"
+            } else {
+                logger.warn("RELEASE_STORE_FILE not found. Release signing is disabled.")
+            }
+        }
+    }
+
     buildTypes {
         release {
-            isMinifyEnabled = false
+            isMinifyEnabled = true
+            isShrinkResources = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
+                "proguard-rules.pro",
             )
+            signingConfig = signingConfigs.getByName("release").takeIf { it.storeFile != null }
+        }
+        debug {
+            isMinifyEnabled = false
+            isShrinkResources = false
         }
     }
     compileOptions {
